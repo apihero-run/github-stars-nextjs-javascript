@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@apihero/github': ^1.1.5
+  '@apihero/react': ^1.2.3
   eslint: 8.25.0
   eslint-config-next: 12.3.1
   next: 12.3.1
@@ -8,6 +10,8 @@ specifiers:
   react-dom: 18.2.0
 
 dependencies:
+  '@apihero/github': 1.1.5
+  '@apihero/react': 1.2.3_react-dom@18.2.0+react@18.2.0
   next: 12.3.1_react-dom@18.2.0+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -17,6 +21,30 @@ devDependencies:
   eslint-config-next: 12.3.1_eslint@8.25.0+typescript@4.8.4
 
 packages:
+
+  /@apihero/core/1.0.1:
+    resolution: {integrity: sha512-ZLA3lf8265lwAQlAdpqZltf6KNlqiLW5s9xKqMpDPN4sjrtf9qjsEbye9hGWRqAlRvHQThHCXzQG8M/8nb30jg==}
+    dev: false
+
+  /@apihero/github/1.1.5:
+    resolution: {integrity: sha512-48l2c73MUWfAi2zgMTt6uLzbECrO4xvXezyhTfUDjxuW4Er4tzQ3GcYykpd6stxzSVpPsWV2FMwhvqKuNEir7g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@apihero/core': 1.0.1
+    dev: false
+
+  /@apihero/react/1.2.3_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-I+YprW5xnM1D/vTRnUEPEb1r2mjx+p8LUq35CigIEmJb54/j88NH/nGE+6vIS8MYLP3vgeji2Dlc6v0fw6Vkpw==}
+    peerDependencies:
+      react: 16.8.x || 17.x || 18.x
+    dependencies:
+      '@tanstack/react-query': 4.12.0_react-dom@18.2.0+react@18.2.0
+      react: 18.2.0
+      tiny-invariant: 1.3.1
+    transitivePeerDependencies:
+      - react-dom
+      - react-native
+    dev: false
 
   /@babel/runtime-corejs3/7.19.4:
     resolution: {integrity: sha512-HzjQ8+dzdx7dmZy4DQ8KV8aHi/74AjEbBGTFutBmg/pd3dY5/q1sfuOGPTFGEytlQhWoeVXqcK5BwMgIkRkNDQ==}
@@ -226,6 +254,28 @@ packages:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /@tanstack/query-core/4.12.0:
+    resolution: {integrity: sha512-KEiFPNLMFByhNL2s6RBFL6Z5cNdwwQzFpW/II3GY+rEuQ343ZEoVyQ48zlUXXkEkbamQFIFg2onM8Pxf0Yo01A==}
+    dev: false
+
+  /@tanstack/react-query/4.12.0_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-prchV1q+CJ0ZVo8Rts2cOF3azDfQizZZySmH6XXsXRcPTbir0sgb9fp0vY/5l5ZkSYjTvWt/OL8WQhAhYMSvrA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@tanstack/query-core': 4.12.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /@types/json5/0.0.29:
@@ -1736,6 +1786,10 @@ packages:
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
+
+  /tiny-invariant/1.3.1:
+    resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
+    dev: false
 
   /to-regex-range/5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
