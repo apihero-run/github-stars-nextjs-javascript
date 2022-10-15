@@ -1,7 +1,8 @@
+import { createQuery } from "@apihero/react";
 import { APIHeroProvider } from "@apihero/react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useGetRepo } from "./apihero/github";
+import { repos } from "@apihero/github";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
     </div>
   );
 }
+
+const useGetRepo = createQuery(repos.getRepo);
 
 function Stars() {
   const result = useGetRepo({
